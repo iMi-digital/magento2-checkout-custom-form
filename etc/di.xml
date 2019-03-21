@@ -1,9 +1,17 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Bodak\CheckoutCustomForm\Api\Data\CustomFieldsInterface" type="Bodak\CheckoutCustomForm\Model\Data\CustomFields" />
-    <preference for="Bodak\CheckoutCustomForm\Api\CustomFieldsRepositoryInterface" type="Bodak\CheckoutCustomForm\Model\CustomFieldsRepository" />
-    <preference for="Bodak\CheckoutCustomForm\Api\CustomFieldsGuestRepositoryInterface" type="Bodak\CheckoutCustomForm\Model\CustomFieldsGuestRepository" />
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Bodak\CheckoutCustomForm\Api\Data\CustomFieldsInterface"
+                type="Bodak\CheckoutCustomForm\Model\Data\CustomFields"/>
+    <preference for="Bodak\CheckoutCustomForm\Api\CustomFieldsRepositoryInterface"
+                type="Bodak\CheckoutCustomForm\Model\CustomFieldsRepository"/>
+    <preference for="Bodak\CheckoutCustomForm\Api\CustomFieldsGuestRepositoryInterface"
+                type="Bodak\CheckoutCustomForm\Model\CustomFieldsGuestRepository"/>
     <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
-        <plugin name="extra_fields_layout" type="Bodak\CheckoutCustomForm\Model\Checkout\LayoutProcessor\Plugin" sortOrder="100"/>
+        <plugin name="extra_fields_layout" type="Bodak\CheckoutCustomForm\Model\Checkout\LayoutProcessor\Plugin"
+                sortOrder="100"/>
+    </type>
+    <type name="Magento\Sales\Api\Data\OrderInterface">
+        <plugin name="get_extra_checkout_fields" type="Bodak\CheckoutCustomForm\Plugin\OrderGet"/>
     </type>
 </config>

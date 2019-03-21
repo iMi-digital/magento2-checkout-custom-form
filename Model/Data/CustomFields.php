@@ -205,6 +205,4 @@ class CustomFields extends AbstractExtensibleObject implements CustomFieldsInter
     {
         return $this->isFieldEnabled(self::CHECKOUT_COMMENT);
     }
-
-
 }

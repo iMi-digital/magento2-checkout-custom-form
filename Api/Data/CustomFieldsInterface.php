@@ -18,7 +18,7 @@ namespace Bodak\CheckoutCustomForm\Api\Data;
  * @category Api/Data/Interface
  * @package  Bodak\CheckoutCustomForm\Api\Data
  */
-interface CustomFieldsInterface
+interface CustomFieldsInterface extends \Magento\Framework\Api\ExtensionAttributesInterface
 {
     const CHECKOUT_BUYER_NAME = 'checkout_buyer_name';
     const CHECKOUT_BUYER_EMAIL = 'checkout_buyer_email';
