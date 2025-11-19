@@ -5,8 +5,8 @@ namespace Bodak\CheckoutCustomForm\Model\CustomFields;
 use Bodak\CheckoutCustomForm\Api\Data\CustomFieldsInterface;
 use Bodak\CheckoutCustomForm\Helper\Config;
 use Magento\Framework\Validator\AbstractValidator;
-use Zend_Validate_Exception;
-use Zend\Filter\Word\UnderscoreToCamelCase;
+use InvalidArgumentException;
+use Laminas\Filter\Word\UnderscoreToCamelCase;
 
 
 class Validator extends AbstractValidator
@@ -55,7 +55,7 @@ class Validator extends AbstractValidator
     {
         $valid = true;
         if (!($value instanceof CustomFieldsInterface)) {
-            throw new Zend_Validate_Exception('Expected value to be instance of \Bodak\CheckoutCustomForm\Api\Data\CustomFieldsInterface');
+            throw new InvalidArgumentException('Expected value to be instance of \Bodak\CheckoutCustomForm\Api\Data\CustomFieldsInterface');
         }
 
         $this->setValue($value);
