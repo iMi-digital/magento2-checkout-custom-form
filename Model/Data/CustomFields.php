@@ -99,7 +99,7 @@ class CustomFields extends AbstractExtensibleObject implements CustomFieldsInter
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutBuyerName(string $checkoutBuyerName = null)
+    public function setCheckoutBuyerName(?string $checkoutBuyerName = null)
     {
         return $this->setData(self::CHECKOUT_BUYER_NAME, $checkoutBuyerName);
     }
@@ -111,7 +111,7 @@ class CustomFields extends AbstractExtensibleObject implements CustomFieldsInter
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutBuyerEmail(string $checkoutBuyerEmail = null)
+    public function setCheckoutBuyerEmail(?string $checkoutBuyerEmail = null)
     {
         return $this->setData(self::CHECKOUT_BUYER_EMAIL, $checkoutBuyerEmail);
     }
@@ -123,7 +123,7 @@ class CustomFields extends AbstractExtensibleObject implements CustomFieldsInter
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutPurchaseOrderNo(string $checkoutPurchaseOrderNo = null)
+    public function setCheckoutPurchaseOrderNo(?string $checkoutPurchaseOrderNo = null)
     {
         return $this->setData(self::CHECKOUT_PURCHASE_ORDER_NO, $checkoutPurchaseOrderNo);
     }
@@ -135,7 +135,7 @@ class CustomFields extends AbstractExtensibleObject implements CustomFieldsInter
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutGoodsMark(string $checkoutGoodsMark = null)
+    public function setCheckoutGoodsMark(?string $checkoutGoodsMark = null)
     {
         return $this->setData(self::CHECKOUT_GOODS_MARK, $checkoutGoodsMark);
     }
@@ -147,7 +147,7 @@ class CustomFields extends AbstractExtensibleObject implements CustomFieldsInter
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutComment(string $comment = null)
+    public function setCheckoutComment(?string $comment = null)
     {
         return $this->setData(self::CHECKOUT_COMMENT, $comment);
     }

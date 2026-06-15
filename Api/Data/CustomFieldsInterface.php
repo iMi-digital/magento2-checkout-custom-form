@@ -76,7 +76,7 @@ interface CustomFieldsInterface
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutBuyerName(string $checkoutBuyerName = null);
+    public function setCheckoutBuyerName(?string $checkoutBuyerName = null);
 
     /**
      * Set checkout buyer email
@@ -85,7 +85,7 @@ interface CustomFieldsInterface
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutBuyerEmail(string $checkoutBuyerEmail = null);
+    public function setCheckoutBuyerEmail(?string $checkoutBuyerEmail = null);
 
     /**
      * Set checkout purchase order number
@@ -94,7 +94,7 @@ interface CustomFieldsInterface
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutPurchaseOrderNo(string $checkoutPurchaseOrderNo = null);
+    public function setCheckoutPurchaseOrderNo(?string $checkoutPurchaseOrderNo = null);
 
     /**
      * Set checkout goods mark
@@ -103,7 +103,7 @@ interface CustomFieldsInterface
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutGoodsMark(string $checkoutGoodsMark = null);
+    public function setCheckoutGoodsMark(?string $checkoutGoodsMark = null);
 
     /**
      * Set checkout comment
@@ -112,7 +112,7 @@ interface CustomFieldsInterface
      *
      * @return CustomFieldsInterface
      */
-    public function setCheckoutComment(string $comment = null);
+    public function setCheckoutComment(?string $comment = null);
 
     /**
      * Checks if a field is enabled
